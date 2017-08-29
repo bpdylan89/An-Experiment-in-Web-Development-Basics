@@ -1,0 +1,11 @@
+User-Agent: *
+Allow: /index.php
+Disallow: /cloud.php
+Disallow: /contact.php
+Disallow: /projects-view.php
+Disallow: /forum.php
+Disallow: /category.php
+Disallow: /topics.php
+Disallow: /posts.php
+
+Sitemap: http://www.bpdylan89.x10host.com/sitemap.xml
