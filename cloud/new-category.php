@@ -35,7 +35,7 @@ if(!empty($_POST['category']) && !empty($_POST['description'])){
       
       if ($category_insert->execute()){
         $_POST = NULL;
-        header("Location: /forum.php");
+        header("Location: /forum/forum.php");
       }else{}
 }?>
 
