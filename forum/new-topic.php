@@ -30,7 +30,7 @@ if(!empty($_POST['topic'])){
       $topic_insert = $conn->prepare($topic_query);
       if ($topic_insert->execute()){
         $_POST = NULL;
-        header("Location: /category.php?id=".$id);
+        header("Location: /forum/category.php?id=".$id);
       }else{}
 }?>
 
