@@ -34,7 +34,7 @@ include 'head.html';
  $reply_row= $reply_set->fetch(PDO::FETCH_ASSOC);
 ?>
 
-"<a href="posts.php?id=<?php echo $reply_row['reply_post']?>"><?php echo $reply_row['reply_content']?></a>"
+"<a href="forum/posts.php?id=<?php echo $reply_row['reply_post']?>"><?php echo $reply_row['reply_content']?></a>"
  <br /><br />
 
 <?php 
@@ -49,7 +49,7 @@ if(!empty($_POST['reply'])){
       
       if ($reply_update->execute()){
         $_POST = NULL;
-        header("Location: /posts.php?id=".$reply_row['reply_post']);
+        header("Location: /forum/posts.php?id=".$reply_row['reply_post']);
       }else{}
 }
 
@@ -59,7 +59,7 @@ if (isset($_GET['del_id'])){
       $delete_query="DELETE FROM reply WHERE reply_id = '{$_GET['del_id']}' AND reply_auth = '{$user['username']}'";
       $reply_delete = $conn->prepare($delete_query);
     if ($reply_delete->execute()){
-      header("Location: /forum.php");
+      header("Location: /forum/forum.php");
     }
 }
 ?>
