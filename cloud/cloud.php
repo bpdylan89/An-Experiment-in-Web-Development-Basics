@@ -20,7 +20,7 @@ include 'head.html';
 // DEFINE USER
 
 if(empty($user) ){ 
-  include 'cloud-bio.html'; 
+  include 'forum/cloud-bio.html'; 
 }else{
 
 // SET PAGE
@@ -74,7 +74,7 @@ if(!empty($_FILES['files'])){
       if ($cloud_insert->execute()){
         move_uploaded_file($file_tmp,$path_to_cloud.$file_name); 
         sleep(6);
-        header('Location: /cloud.php?page='.$page_total);
+        header('Location: /forum/cloud.php?page='.$page_total);
       }
     }
   $_FILES = NULL;
@@ -89,25 +89,25 @@ if (isset($_GET['del_id'])){
     if ($cloud_delete->execute()){
       unlink("/home/bpdylan8/public_html/cloud/$delete_id");
       sleep(3);
-      header('Location: /cloud.php?page='.$_GET['page']);
+      header('Location: /forum/cloud.php?page='.$_GET['page']);
       }
 }
   
 ?>
 
 <!-- PER PAGE SELECT -- in progress
-<form method="GET" action="cloud.php" style="float:left;margin-left:50px;">
+<form method="GET" action="forum/cloud.php" style="float:left;margin-left:50px;">
 <select name="per_page">
 	<option name="4" value="4" selected="selected">4</option>
 	<option name="6" value="6">6</option>
 	<option name="8" value="8">8</option>
 </select>
-<a href="/cloud.php?page=<?php echo $_GET['page'].'&per_page='.$_GET['per_page'] ?>">
+<a href="/forum/cloud.php?page=<?php echo $_GET['page'].'&per_page='.$_GET['per_page'] ?>">
 <input type="button" value="per page" /> </a>
 </form>
 -->
 
-<form action="cloud.php" method="POST" enctype="multipart/form-data">
+<form action="forum/cloud.php" method="POST" enctype="multipart/form-data">
   <h1> Cloud Storage</h1>
   <h2>Upload files to cloud</h2>
       <input type="file" multiple="multiple" name="files[]" id="file"/>
@@ -136,7 +136,7 @@ while($cloud_row=$cloud_set->fetch(PDO::FETCH_ASSOC)){
 ?>
   
       <tr>
-        <td width="30%"><a href="secure.php?file=<?php echo $cloud_row['name'] ?>" download="<?php echo $cloud_row['name'] ?>" >
+        <td width="30%"><a href="cloud/secure.php?file=<?php echo $cloud_row['name'] ?>" download="<?php echo $cloud_row['name'] ?>" >
         	<?php if (strpos($cloud_row['type'], 'image' ) !== false) { ?>
 			<img <?php echo 'src="cloud/'. $cloud_row['name']. '" alt="'. $cloud_row['name']. '" height="75"' ?> >
         	<div style="overflow: hidden; text-overflow: ellipsis; max-width: 200px;">&nbsp<?php } echo $cloud_row['name'] ?></div></td>
@@ -164,7 +164,7 @@ if(isset($_GET['page'])){
   $previous_page = $_GET['page'] - 1;
 
   if ($_GET['page'] != 1) {
-  ?><a href="cloud.php?page=<?php echo $previous_page ?>" > PREVIOUS << </a> &nbsp 
+  ?><a href="forum/cloud.php?page=<?php echo $previous_page ?>" > PREVIOUS << </a> &nbsp 
 
   <?php }
   if ($file_total>4) { 
@@ -197,13 +197,13 @@ if(isset($_GET['page'])){
   if($next_page<=$page_total){  
   ?>
 
-  &nbsp <a href="cloud.php?page=<?php echo $next_page ?>" > >> NEXT </a>
+  &nbsp <a href="forum/cloud.php?page=<?php echo $next_page ?>" > >> NEXT </a>
 
 <?php  }
 } 
 
 if ($_GET['page'] > ($page_total)) {
-    header('Location: /cloud.php?page='.$page_total);
+    header('Location: /forum/cloud.php?page='.$page_total);
 }
 ?>
 
