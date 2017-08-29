@@ -31,7 +31,7 @@ $category_row= $category_set->fetch(PDO::FETCH_ASSOC);
 // CREATE TOPIC
 
 if(empty($user)){}else{ ?>
-    <a href="/new-topic.php?id=<?php echo $_GET['id'] ?>"><input type="submit" value="Create Topic"></a>
+    <a href="/forum/new-topic.php?id=<?php echo $_GET['id'] ?>"><input type="submit" value="Create Topic"></a>
 <?php } ?>
 <br />
 
@@ -54,7 +54,7 @@ if(empty($user)){}else{ ?>
 ?>
 
       <tr>
-        <td align="left"><a href='topics.php?id=<?php echo $topic_row['topic_id'] ?>'><?php echo $topic_row['topic_subject'] ?></a> 
+        <td align="left"><a href='/forum/topics.php?id=<?php echo $topic_row['topic_id'] ?>'><?php echo $topic_row['topic_subject'] ?></a> 
         <br /><tag style="margin-left:10px;">- <?php echo $topic_row['topic_auth']?></tag>
         <pre style="text-align:right;"><?php echo $topic_count['count'] ?></pre></td>
         <td><?php echo $topic_row['topic_date'] ?></a></td>
