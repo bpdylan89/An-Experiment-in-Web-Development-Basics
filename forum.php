@@ -21,7 +21,7 @@ include 'head.html';
 // CREATE CATEGORY
 
 if(empty($user)){}else{ ?>
-    <a href="/new-category.php"><input type="submit" value="Create Category"></a>
+    <a href="cloud/new-category.php"><input type="submit" value="Create Category"></a>
 <?php } ?>
 
 <table cellpadding="20" align="center" width="80%" border="1px solid grey">
@@ -39,7 +39,7 @@ if(empty($user)){}else{ ?>
  while($category_row=$category_set->fetch(PDO::FETCH_ASSOC))
  { ?>
         <tr>
-        <td><a href='category.php?id=<?php echo $category_row['id'] ?>'><?php echo $category_row['title'] ?></a></td>
+        <td><a href='cloud/category.php?id=<?php echo $category_row['id'] ?>'><?php echo $category_row['title'] ?></a></td>
         <td><?php echo $category_row['description'] ?></td>
         </tr>
 <?php } ?>
