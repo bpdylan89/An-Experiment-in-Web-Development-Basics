@@ -3,4 +3,4 @@ An experimental website portal created with the intention of better understandin
 
 https://www.bpdylan89.x10host.com
 
-![image](https://www.bpdylan89.x10host.com/images/BDP.jpg)
+![Alt text](https://www.bpdylan89.x10host.com/images/BDP.jpg)
