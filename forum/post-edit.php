@@ -33,7 +33,7 @@ include 'head.html';
  $posts_row= $posts_set->fetch(PDO::FETCH_ASSOC);
 ?>
 
-"<a href="posts.php?id=<?php echo $posts_row['posts_id']?>"><?php echo $posts_row['posts_content']?></a>"
+"<a href="forum/posts.php?id=<?php echo $posts_row['posts_id']?>"><?php echo $posts_row['posts_content']?></a>"
 <br /><br />
 
 <?php 
@@ -48,7 +48,7 @@ if(!empty($_POST['post'])){
       
       if ($post_update->execute()){
         $_POST = NULL;
-        header("Location: /posts.php?id=".$posts_row['posts_id']);
+        header("Location: /forum/posts.php?id=".$posts_row['posts_id']);
       }else{}
 }
 
@@ -61,7 +61,7 @@ if (isset($_GET['del_id'])){
     if ($post_delete->execute()){
       $reply_delete = $conn->prepare($del_reply_query);
       $reply_delete->execute();
-      header("Location: /forum.php");}
+      header("Location: /forum/forum.php");}
 }
 ?>
 
