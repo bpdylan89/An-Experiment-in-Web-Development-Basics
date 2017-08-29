@@ -25,14 +25,14 @@ include 'head.html';
  $posts_row= $posts_set->fetch(PDO::FETCH_ASSOC);
 ?>
 
-<h3>"<a href="topics.php?id=<?php echo $posts_row['topic_id']?>"><?php echo $posts_row['topic_subject']?></a>"</h3>
+<h3>"<a href="forum/topics.php?id=<?php echo $posts_row['topic_id']?>"><?php echo $posts_row['topic_subject']?></a>"</h3>
 <br /><br />
 
 <table align="center" width="90%" border="1px solid grey">
 
   <tr>
     <th><p style="text-align:left;margin-left:20px;">
-        <?php echo $posts_row['posts_auth'] ?><a href="post-edit.php?id=<?php echo $posts_row['posts_id'] ?>"><?php if ($posts_row['posts_auth'] == $user['username']) { ?> <input type="button" value="Edit"><?php } ?></a></p>
+        <?php echo $posts_row['posts_auth'] ?><a href="forum/post-edit.php?id=<?php echo $posts_row['posts_id'] ?>"><?php if ($posts_row['posts_auth'] == $user['username']) { ?> <input type="button" value="Edit"><?php } ?></a></p>
         POST -- "<?php echo $posts_row['posts_content'] ?>"<p style="text-align:right;margin-right:15px;"><?php echo $posts_row['posts_date'] ?>
     </p></th>
   </tr>
@@ -48,7 +48,7 @@ include 'head.html';
 
   <tr>
     <td align="left"><p style="margin-left:20px;text-align:left;">
-            <?php echo $reply_row['reply_auth'] ?><a href="reply-edit.php?id=<?php echo $reply_row['reply_id'] ?>"><?php if ($reply_row['reply_auth'] == $user['username']) { ?> <input type="button" value="Edit"><?php } ?></a></p>
+            <?php echo $reply_row['reply_auth'] ?><a href="forum/reply-edit.php?id=<?php echo $reply_row['reply_id'] ?>"><?php if ($reply_row['reply_auth'] == $user['username']) { ?> <input type="button" value="Edit"><?php } ?></a></p>
             <p style="margin-left:50px;"><?php echo $reply_row['reply_content'] ?></p>
             <p style="text-align:right;margin-right:15px;"><?php echo $reply_row['reply_date'] ?>
     </p></td>
@@ -77,7 +77,7 @@ if( empty($user) ) {
       
       if ($reply_insert->execute()){
         $_POST = NULL;
-        header("Location: /posts.php?id=".$_GET['id']);
+        header("Location: /forum/posts.php?id=".$_GET['id']);
       }else{}
   }
 ?>
