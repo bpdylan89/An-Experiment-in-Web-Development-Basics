@@ -27,7 +27,7 @@ $topic_row= $topic_set->fetch(PDO::FETCH_ASSOC);
 ?><br /><br />
 
 <?php if(empty($user)){}else{ ?>
-    <a href="/new-post.php?id=<?php echo $_GET['id'] ?>"><input type="submit" value="Create Post"></a> 
+    <a href="/forum/new-post.php?id=<?php echo $_GET['id'] ?>"><input type="submit" value="Create Post"></a> 
 <?php } ?><br />
 
 <table cellpadding="15" align="center" width="90%" border="1px solid grey">
@@ -49,7 +49,7 @@ $topic_row= $topic_set->fetch(PDO::FETCH_ASSOC);
   ?>
         
       <tr>
-        <td align="left"><a href="posts.php?id=<?php echo $posts_row['posts_id'] ?>"><?php echo $posts_row['posts_content'] ?></a>  
+        <td align="left"><a href="forum/posts.php?id=<?php echo $posts_row['posts_id'] ?>"><?php echo $posts_row['posts_content'] ?></a>  
         <br /><tag style="margin-left:10px;">- <?php echo $posts_row['posts_auth']?></tag>
         <pre style="text-align:right;"><?php echo $posts_count['count'] ?></pre></td>
         <td><?php echo $posts_row['posts_date'] ?></td>
