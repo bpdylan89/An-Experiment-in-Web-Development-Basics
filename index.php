@@ -22,8 +22,8 @@ if (isset($_GET['del_id'])){
 
 <head>
 <title>BPDYLAN89 Web Enthusiast</title>
-	<link rel="stylesheet" type="text/css" href="style.css" />
-	<link rel="stylesheet" type="text/css" href="mobile.css" media="screen and (max-width: 1024px)" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/mobile.css" media="screen and (max-width: 1024px)" />
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Righteous|Roboto" />
 	<link rel="icon" type="image/x-icon" href="/images/bpdylan89.ico" />
         <link rel="publisher" href="https://plus.google.com/+BenjaminPrescottBDP">
