@@ -30,7 +30,7 @@ if(!empty($_POST['post'])){
       
       if ($posts_insert->execute()){
         $_POST = NULL;
-        header("Location: /topics.php?id=".$_GET['id']);
+        header("Location: /forum/topics.php?id=".$_GET['id']);
       }else{}
 }?>
 
