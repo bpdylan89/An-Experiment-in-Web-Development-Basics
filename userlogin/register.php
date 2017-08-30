@@ -80,7 +80,7 @@ if ($pass != $pass_conf){
 <html lang="en">
 <head>
 <title>Register for BPDYLAN89</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="css/regmobile.css" media="screen and (max-width: 1024px)">
         <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Righteous|Roboto" />
         <link rel="icon" type="image/x-icon" href="/images/bpdylan89.ico" />
