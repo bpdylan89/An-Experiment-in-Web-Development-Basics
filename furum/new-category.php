@@ -8,7 +8,7 @@ include 'session.php';
 
 if( !empty($user) ){
   }else{
-  header("Location: /login.php");
+  header("Location: /userlogin/login.php");
 }
 
 include 'head.html'; 
