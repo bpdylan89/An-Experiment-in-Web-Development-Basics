@@ -12,12 +12,12 @@
         <label for="navbox"></label>
             <ul class="navigation">
                 <li><a href="/" title="bpdylan89" >HOME</a></li>
-                <li><a href="forum.php" title="forum" >FORUM</a></li>
-                <li><a href="cloud.php" title="cloud">CLOUD</a></li>
+                <li><a href="userlogin/forum.php" title="forum" >FORUM</a></li>
+                <li><a href="cloud/cloud.php" title="cloud">CLOUD</a></li>
                 <li><a href="contact.php" title="contact">CONTACT</a></li>
                 <li>
                 <?php // CHECK USER
-                	if (empty($user)){?><a href="login.php" title="login">LOGIN</a><?php }else{ ?><a href="logout.php" title="logout">LOGOUT</a><?php } ?></li>
+                	if (empty($user)){?><a href="userlogin/login.php" title="login">LOGIN</a><?php }else{ ?><a href="userlogin/logout.php" title="logout">LOGOUT</a><?php } ?></li>
             </ul>
 </div>
 </div>
