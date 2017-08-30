@@ -1,0 +1,76 @@
+<!-- bpdylan89.txt - Benjamin Dylan Prescott - bpdylan89.x10host.com - 1/13/2017-->
+
+<div id="biopage">
+
+<div class="biowrap">
+
+<div style="text-align:left;margin-top:-40px;line-height:1.5;text-align:justify;" class="bio">
+<img itemprop="image" src="/images/BDP.jpg" title="bpdylan89" alt="bpdylan89" />
+
+<p style="padding-top: 30px;"> BPDYLAN89 has been the on-line alias for Benjamin Dylan Prescott, me, over the past decade. 
+A web development enthusiast and mobile fanatic, I have always been captivated by technology.
+<br />
+<br />While attending high school at Pembroke Academy I took introduction to programming, where I found my interest in computers. 
+In class we were taught the fundamentals of programing, working with Qbasic and Visual Basic. Outside of school I spent time using various 
+integrated development environments, Photoshop applications, and digital audio workstations to create an array of digital arts. 
+Over the years learning the basics of HTML, CSS, and JavaScript through practice on social media sites like Myspace and tumblr. 
+<br />
+<br />Years later I began the endeavor experimenting with websites via managed hosting services and dedicated home server.
+While also gaining a better understanding of web-mail, certificates, and a long list of server related software.
+Using databases to store information and server-side scripting, to make an interactive portal website. 
+Implementing the knowledge I have gained to create a growing number of web applications including a user database, cloud storage, and forum. <br />
+<br />
+The result is this website showcasing some of these skills. Check out the <a href="/projects.php" title="projects">code</a> that makes up this website here.
+</p>
+<p>I have also been experimenting with Java to learn the basics of creating an Android app. Using the Android and Java Development Kits 
+to create templates in integrated environments like netbeans and eclypse I am able to create, edit, and compile code. Then, either through 
+the virtual machine or debug bridge, I am can test apps on different builds of android. Through the creation of a simple Ouija Board I was able 
+to learn about the life-cycle and processes of a Java based app. <br />
+<br />
+Take a look at the the project files and download the <a href="/projects.php#app_open" title="app">app</a> here.<br />
+<br />
+Eventually I would like to learn more about macOS & iOS, and begin working with Python and Ruby.. among others.
+</p>
+<br />
+</div>
+
+<div class="connect">
+	<a href="https://www.facebook.com/benjamindylan.prescott" title="facebook"><img src="/images/facebook-logo.png" title="facebook" alt="connect on facebook"></a>
+	<a href="https://plus.google.com/+BenjaminPrescottBDP" title="google+"><img src="/images/google-logo.png" title="google+" alt="connect on google+"></a>
+	<a href="http://www.bpdylan89.tumblr.com/" title="tumblr"><img src="/images/tumblr-logo.png" title="tumblr" alt="follow me on tumblr"></a>
+</div>
+<p style="text-align:left;padding-left:50px;">-Benjmain Dylan Prescott (bpdylan89)</p>
+</div>
+
+<div class="skills">
+<section>
+<br />
+<p style="text-align:center;"><u>SKILLS:</u></p><br />
+<p>-Knowledgeable in Android, Linux, and Windows operating systems</p>
+<p>-Web hosting via managed or dedicated server</p>
+<ul>
+	<li>LAMP/WAMP apache packages</li>
+	<li>Cpanel</li>
+	<li>Domain Name Services</li>
+        <li>Search Engine Optimization</li>
+	<li>Transport Layer Security</li>
+</ul>
+<p>-Full-stack web development</p>
+<ul>	
+	<li>concept, layout, design</li>
+	<li>databases and programming</li>
+	<li>front and back end development</li>
+</ul>
+<p style="text-align:center;"><u>LANGUAGES:</u></p>
+<ul>	
+	<li>HTML(5)</li>
+	<li>PHP</li>
+	<li>CSS(3)</li>
+	<li>SQL</li>
+	<li>JavaScript</li>
+</ul>
+</section>
+</div>
+</div>
+
+<!-- Benjamin Dylan Prescott - bpdylan89.x10host.com - 12/20/2016 -->
