@@ -506,6 +506,7 @@ $mime_extension_map = array(
     'zoo'           => 'application/x-zoo',
     '123'           => 'application/vnd.lotus-1-2-3',
     '669'           => 'audio/x-mod'
+    // THIS MIME ARRAY LIST WAS FOUND AT https://gist.github.com/plasticbrain/3887245
 );
 
 // FILE HEADER INFORMATION
