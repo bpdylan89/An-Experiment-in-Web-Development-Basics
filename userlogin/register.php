@@ -62,7 +62,7 @@ if ($pass != $pass_conf){
 					if (filter_var($mail, FILTER_VALIDATE_EMAIL)) {
 							
 							if( $stmt->execute() ){
-								header("Location: /login.php");
+								header("Location: /userlogin/login.php");
 							}else{
 								$message = 'Sorry there must have been an issue creating your account';
 							}
@@ -102,9 +102,9 @@ if ($pass != $pass_conf){
 
 <h1>Register</h1>
 <br />or<br />
-<br /><a href="/login.php"><u><h2>login</u></h2></a>
+<br /><a href="/userlogin/login.php"><u><h2>login</u></h2></a>
 <br />
-	<form action="register.php" method="POST">
+	<form action="userlogin/register.php" method="POST">
 		<input type="text" placeholder="Email" name="email">
 		<input type="text" placeholder="Username" name="username">
 		<input type="password" placeholder="Password" name="password">
@@ -113,7 +113,7 @@ if ($pass != $pass_conf){
 	</form>
 </div>
 
-<?php include 'login-bio.html'; ?>
+<?php include 'userlogin/login-bio.html'; ?>
 
 </div>
 
