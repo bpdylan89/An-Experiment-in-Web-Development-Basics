@@ -31,7 +31,7 @@ if( isset($_SESSION['user_id']) ){
     $inactive = 1800;
     
     	if($session_life > $inactive){ 
-        	header("Location: /logout.php");
+        	header("Location: /userlogin/logout.php");
     	}
     }
 } 
