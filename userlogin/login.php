@@ -55,7 +55,7 @@ if(!empty($message)){ ?>
 <br /><a href="register.php"><u><h2>register</u></h2></a>
 <br />
 
-	<form action="login.php" method="POST">
+	<form action="userlogin/login.php" method="POST">
 		
 		<input type="text" placeholder="Enter your email" name="email">
 		<input type="password" placeholder="password" name="password">
