@@ -37,7 +37,7 @@
 
 <ul class="pages">
   <li><a href="/<?php echo basename($_SERVER['PHP_SELF']) ?>" title="top">TOP OF PAGE</a></li>
-  <li><a href="/register.php" title="register">REGISTER</a></li>
+  <li><a href="/userlogin/register.php" title="register">REGISTER</a></li>
   <li><a href="/" title="bpdylan89">HOME</a></li>
 </ul>
 
