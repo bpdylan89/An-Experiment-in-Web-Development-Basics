@@ -2,7 +2,7 @@
 
 <?php
 
-// CHOOSE CLOUD FOLDER and HANDLE ERRORS
+// CHOOSE CLOUD PATH and HANDLE ERRORS
 
   $folder = realpath('/home/bpdylan8/public_html/cloud/');
   if(!$file = realpath($folder.'/'.$_GET['file']))
