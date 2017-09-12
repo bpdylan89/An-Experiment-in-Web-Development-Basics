@@ -62,8 +62,46 @@ if (isset($_GET['del_id'])){
 // USER PROFILE
 
 if( !empty($user) ){ ?>
-	<p class="loggedin">Welcome <?= $user['username']; ?>,<br />
-	<br />
+
+    <p class="loggedin">Welcome <?= $user['username']; ?>,<br />
+    <br />
+
+<?php
+
+// CHECK IF CHAT ROOM IS AVAILABLE
+
+function url_test($url ) {
+  $timeout = 10;
+  $check = curl_init();
+  curl_setopt ( $check, CURLOPT_URL, $url );
+  curl_setopt ( $check, CURLOPT_RETURNTRANSFER, 1 );
+  curl_setopt ( $check, CURLOPT_TIMEOUT, $timeout );
+  $http_respond = curl_exec($check);
+  $http_respond = trim( strip_tags( $http_respond ) );
+  $http_code = curl_getinfo( $check, CURLINFO_HTTP_CODE );
+  if ( ( $http_code == "200" ) || ( $http_code == "302" ) ) {
+    return true;
+  } else {
+    return false;
+  }
+  curl_close( $check );
+}
+ 
+$website = "bdprescott.ddns.net";
+if( !url_test( $website ) ) {
+  echo "Chat room unavailable.<br /><br />";
+}
+else { 
+?>
+
+<a href="http://bdprescott.ddns.net:8081/?username=<?php echo $user['username'] ?>" target="_blank" onclick="return confirm('Redirect to BPDYLAN89 Chat Room')" title="chat"><input type="submit" value="Chat now" ></a><br /><br />
+
+<?php } 
+
+// DELETE USER ACCOUNT
+
+?>
+
 	<a href="?del_id=<?php echo $user['id'] ?>" onclick="return confirm('Confirm to Delete Account')" title="delete"><input type="button" value="Delete User Account" ></a><br /><br /></p>
 <?php }else{} 
 
