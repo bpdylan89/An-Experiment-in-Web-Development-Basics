@@ -62,7 +62,15 @@ if ($pass != $pass_conf){
 					if (filter_var($mail, FILTER_VALIDATE_EMAIL)) {
 							
 							if( $stmt->execute() ){
-								header("Location: /userlogin/login.php");
+							        $admin_email = "bpdylan89@bpdylan89.x10host.com";
+							        $subject = "New User";
+							        $comment = "New user " . $name . " has registered for bpdylan89.x10host.com";
+							        $reply_subject = "Welcome to BPDYLAN89!";
+							        $reply_comment = "Hello " . $name . ", Thanks for joining! -bpdylan89";
+							
+							        mail($admin_email, $subject, $comment, "From:" . $mail);
+							        mail($mail, $reply_subject, $reply_comment, "From:" . $admin_email);
+								header("Location: /login.php");
 							}else{
 								$message = 'Sorry there must have been an issue creating your account';
 							}
